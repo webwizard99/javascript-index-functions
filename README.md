@@ -8,7 +8,7 @@ function getParentElementByClass(element, className, boundingId) {
   contNu = true;
   match = false;
   do {
-  	if (refElement.parentNode) {
+  	if (refElement.parentNode && refElement.nodeName !== 'BODY') {
     	refElement = refElement.parentNode;
     } else {
     	contNu = false;
@@ -39,7 +39,7 @@ function getParentElementByID(element, IDName, boundingId) {
   contNu = true;
   match = false;
   do {
-  	if (refElement.parentNode) {
+  	if (refElement.parentNode && refElement.nodeName !== 'BODY') {
     	refElement = refElement.parentNode;
     } else {
     	contNu = false;
@@ -70,7 +70,7 @@ function getParentElementByAttribute(element, attributeName, attributeValue, bou
   contNu = true;
   match = false;
   do {
-  	if (refElement.parentNode) {
+  	if (refElement.parentNode && refElement.nodeName !== 'BODY') {
     	refElement = refElement.parentNode;
     } else {
     	contNu = false;
